@@ -51,11 +51,11 @@ module GifteryClient
     end
 
     # send request
-    def self.send_request(cmd, data)
+    def self.send_request(cmd, data, sig)
       # params to send
       params = {
           id: get_id,
-          sig: get_sig(cmd, data),
+          sig: sig,
           cmd: cmd,
           data: data,
           out: 'json'
