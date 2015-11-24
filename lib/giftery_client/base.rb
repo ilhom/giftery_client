@@ -73,6 +73,7 @@ module GifteryClient
       http.key = OpenSSL::PKey::RSA.new(key)
       http.verify_mode = OpenSSL::SSL::VERIFY_PEER
 
+      puts full_path
       request = Net::HTTP::Get.new(full_path)
       response = http.request(request)
 
