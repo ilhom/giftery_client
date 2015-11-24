@@ -24,10 +24,10 @@ Or install it yourself as:
 ```ruby
 require 'giftery_client'
 
-GifteryClient::Base.set_id('')
-GifteryClient::Base.set_secret('')
-GifteryClient::Base.set_crt_cert_path('')
-GifteryClient::Base.set_key_path('')
+GifteryClient::Base.set_id(client_ID)
+GifteryClient::Base.set_secret(client_SECRET)
+GifteryClient::Base.set_crt_cert_path(.crt path)
+GifteryClient::Base.set_key_path(.key path)
 ```
 
 Test connection
