@@ -21,6 +21,34 @@ Or install it yourself as:
 
 ## Usage
 
+```ruby
+require 'giftery_client'
+
+GifteryClient::Base.set_id('11638')
+GifteryClient::Base.set_secret('UdE5szqJ4S4hoU#U@Z29')
+GifteryClient::Base.set_crt_cert_path('/Users/ilhom/bcode/GIFTERY/GIFTERY_STAGE_11638.crt')
+GifteryClient::Base.set_key_path('/Users/ilhom/bcode/GIFTERY/GIFTERY_STAGE_11638.key')
+```
+
+Test connection
+```ruby
+test = GifteryClient::ConnectTest.new
+test.test_connecttion
+```
+
+
+Get products
+```ruby
+pr = GifteryClient::Products.new
+pr.get_products
+```
+
+Make Order
+```ruby
+order = GifteryClient::Order.new
+order.make_order(2111, 2000, 'madrahimov.ilhom@gmail.com', 'TEST', '', '', 'code: bant', 'test comment', '1')
+```
+
 
 ## Development
 
